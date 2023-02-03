@@ -77,10 +77,10 @@ export default function Managedata({
                 onChange={(e) => setTeacher(e.target.value)}
                 defaultValue={teacher}
               >
-                <option value="Jhon Ramirez">Jhon Ramirez</option>
-                <option value="Marcelo Puentes">Marcelo Puentes</option>
-                <option value="Daniel Cabal">DanielC</option>
-                <option value="Sandra Ramirez"></option>
+                <option value="Manolo">Manolo</option>
+                <option value="Marcelo P">Marcelo</option>
+                <option value="Daniel C">Daniel</option>
+                <option value="Sandra B ">Sandra</option>
               </select>
             </label>
           </div>
@@ -98,11 +98,7 @@ export default function Managedata({
           <div>
             <label htmlFor="level" defaultValue={level}>
               Level
-              <select
-                id="level"
-                name="level"
-                onChange={(e) => setLevel(e.target.value)}
-              >
+              <select id="level" onChange={(e) => setLevel(e.target.value)}>
                 <option value="1">1</option>
 
                 <option value="2">2</option>
@@ -171,7 +167,9 @@ export default function Managedata({
             />
           </div>
           <div>
-            <button type="submit">{update ? "Update" : "Add"}</button>
+            <button type="submit" className="add-button">
+              {update ? "Update" : "Add"}
+            </button>
             {update ? <button onClick={onCancel}>Cancel</button> : null}
           </div>
         </form>

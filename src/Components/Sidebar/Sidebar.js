@@ -15,7 +15,6 @@ function Sidebar() {
                 window.location.pathname = val.link;
               }}
             >
-              {" "}
               <div id="icon">{val.icon}</div>
               <div id="tittle">{val.tittle}</div>
             </li>

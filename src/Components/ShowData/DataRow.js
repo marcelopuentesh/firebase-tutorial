@@ -13,6 +13,7 @@ export default function DataRow({ showData, onDelete, index, onEdit }) {
       <td>{showData.enddate}</td>
       <td>{showData.progress}</td>
       <td>
+        {/* SE CRASHEA LA APP AL EDITAR */}
         <button
           onClick={() => {
             onEdit(index);
@@ -20,6 +21,7 @@ export default function DataRow({ showData, onDelete, index, onEdit }) {
         >
           Edit
         </button>
+        {/* #SOLUCIONAR El boton de Delete tiene un error, elimina el primero de la fila y no el archivo que se crea.  */}
         <button
           onClick={() => {
             onDelete(index);

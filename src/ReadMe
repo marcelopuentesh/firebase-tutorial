@@ -1,0 +1,19 @@
+## Learning Management System
+
+==============================
+
+## Features
+
+==============================
+
+- Website
+- Explore course according to the assignement
+- Visualize the course date and date - About us - FAQ page - Support
+- Join as Admin and manage all the data - Join as Teacher and upload content
+- # Join as Student and enroll in course
+- Teacher Panel - Login/Register - ForgetPassword/ChangePassword - Send message to Enrolled Student - Commit each class (Individually or All) - Category CRUD - Upload course acording to category - If course true then anyone enrolled can see the course - If course false then nothing is shown - Can see the total enrolled students and their progress and grades
+  ==============================
+- # Student Panel - Login/Register/OTP - ForgetPassword/ChangePassword/Profile - Enrolled Courses - Each enrolled course show the totality of lessons that an unit has - Set a commit in a lesson - Set true the assistance checkbox -
+- Admin Panel - Manage data (Course and its data (teacher, level(unit, lesson)))
+  -Manage users (editing roles, seting new users) - Add/Update/Delete any content - Enable or disable any course, student or teacher.
+  ==============================

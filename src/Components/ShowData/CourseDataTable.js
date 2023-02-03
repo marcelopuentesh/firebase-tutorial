@@ -5,7 +5,7 @@ import DataRow from "./DataRow";
 const showData = [
   {
     id: 1,
-    teacher: "Jhon Ramirez",
+    teacher: "Manolo C",
     students: "25",
     level: 1,
     unit: 1,
@@ -16,7 +16,7 @@ const showData = [
   },
   {
     id: 2,
-    teacher: "Roxanne",
+    teacher: "Roxanne Whisper",
     students: "10",
     level: 1,
     unit: 1,
