@@ -1,11 +1,10 @@
 import React from "react";
-import "../../App.css";
 import { SidebarData } from "./SidebarData";
-
-export function Sidebar() {
+import "../App.css";
+function Sidebar() {
   return (
     <div className="Sidebar">
-      <ul className="SidebarList">
+      <ul className="SidebarList-student">
         {SidebarData.map((val, key) => {
           return (
             <li
@@ -15,8 +14,8 @@ export function Sidebar() {
                 window.location.pathname = val.link;
               }}
             >
-              <div id="icon">{val.icon}</div>
-              <div id="tittle">{val.tittle}</div>
+              <div id="icon"> {val.icon}</div>
+              <div id="tittle"> {val.tittle} </div>
             </li>
           );
         })}

@@ -6,20 +6,26 @@ import Users from "./Components/Users/Users";
 import CourseDataTable from "./Components/Courses/CourseDataTable";
 import Managefiles from "./Components/Managefiles";
 import Dashboard from "./Components/Dashboard";
-// import Login from "./Components/Login";
-
+import { TeacherRouter } from "./teachers/teachers.router";
+import { StudentRouter } from "./students/students.router";
+import { useEffect } from "react";
 function App() {
+  let currentUrl = window.location.pathname.split("/")
+  useEffect(()=>{
+    currentUrl =window.location.pathname.split("/");
+    console.log(currentUrl)
+  },[])
   return (
     // CREAR RUTEO DESDE EL LOGIN & register
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          {/* <Route path="/" component={<Login />} /> */}
-          <Route path="/" component={<Dashboard />} />
-          <Route path="/users" component={<Users />} />
-          <Route path="/data" component={<CourseDataTable />} />
-          <Route path="/manage-files" component={<Managefiles />} />
-        </Routes>
+        {currentUrl[1] ==='student'?<StudentRouter />
+        :currentUrl[1]==='admin'?(<Routes>
+          <Route path="admin/" element={<Dashboard />} />
+          <Route path="admin/users" element={<Users />} />
+          <Route path="admin/data" element={<CourseDataTable />} />
+          <Route path="admin/manage-files" element={<Managefiles />} />
+        </Routes>):currentUrl[1]=== 'teacher' ?<TeacherRouter />:null}
       </BrowserRouter>
     </div>
   );

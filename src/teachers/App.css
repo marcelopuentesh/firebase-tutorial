@@ -1,0 +1,193 @@
+.App {
+  text-align: center;
+  margin-top: 0px;
+}
+
+html {
+  margin-top: -18px;
+  background-color: #d9d9d9;
+  position: fixed;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Sidebar {
+  height: 100%;
+  width: 250px;
+  background-color: #e30b13;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  position: fixed;
+}
+.SidebarList {
+  height: auto;
+  width: 100%;
+  padding: 0%;
+  position: relative;
+  top: 140px;
+  justify-content: center;
+}
+
+.SidebarList .row {
+  width: 100%;
+  height: 50px;
+  background-color: #e30b13;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: brown;
+}
+.SidebarList .row:hover #active {
+}
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+.row #tittle {
+  flex: 70%;
+}
+.Dashboard {
+  margin-top: 10px;
+  margin-left: 300px;
+  position: fixed;
+}
+.Dashboard-classp {
+  position: absolute;
+  width: 490.81px;
+  height: 704px;
+  top: 216px;
+  margin-left: 0px;
+  margin-top: 120px;
+
+  background: #f8f8f8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.Dashboard .course-container {
+  position: absolute;
+  width: 440px;
+  height: 170px;
+  background: #ffffff;
+  border: 3px solid #5f5f5f;
+  border-radius: 5px;
+  box-shadow: 0px 3px 19px rgb(0 0 0 / 25%);
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+  margin-left: 32px;
+  display: list-item;
+  block-size: auto;
+}
+.Dashboard .course-programmed {
+  margin-left: 512px;
+  position: absolute;
+  margin-top: 250px;
+  width: 646px;
+  height: 704px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+.Dashboard .course-programmed-container {
+  position: absolute;
+  width: 440px;
+  height: 170px;
+  background: #ffffff;
+  border: 3px solid #5f5f5f;
+  border-radius: 5px;
+  box-shadow: 0px 3px 19px rgb(0 0 0 / 25%);
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+  margin-left: 32px;
+  display: list-item;
+  block-size: auto;
+}
+
+.profile {
+  margin-top: 149px;
+  margin-left: 399px;
+  position: fixed;
+}
+.profile-container {
+  position: absolute;
+  width: 1221px;
+  height: 689px;
+  background: #fbfbfb;
+  border: 10px solid #fbfbfb;
+  box-shadow: -1px 4px 14px 7px rgba(0, 0, 0, 0.25);
+}
+.profile-items {
+}
+.AssistanceTable {
+  position: absolute;
+  top: 50px;
+  margin-left: 250px;
+  margin-top: 150px;
+}
+.assistance-table-tittle {
+  left: 281px;
+  position: absolute;
+  top: 150px;
+}
+table {
+  width: 200%;
+  position: relative;
+  left: -100px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  border: 10px solid #fbfbfb;
+  box-shadow: -1px 4px 14px 7px rgba(0, 0, 0, 0.25);
+}
+table th,
+table td {
+  border-bottom: 1px solid wheat;
+  padding: 4px 8px;
+  text-align: left;
+}
