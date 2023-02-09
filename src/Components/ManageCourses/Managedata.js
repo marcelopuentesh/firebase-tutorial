@@ -7,7 +7,7 @@ export default function Managedata({
   update = false,
   onUpdate,
 }) {
-  const [teacher, setTeacher] = useState({});
+  const [teacher, setTeacher] = useState("");
   const [students, setStudents] = useState([]);
   const [level, setLevel] = useState(0);
   const [unit, setUnit] = useState(0);
@@ -17,6 +17,7 @@ export default function Managedata({
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    console.log(data);
     if (update) {
       setTeacher(data.teacher);
       setStudents(data.students);
@@ -27,7 +28,7 @@ export default function Managedata({
       setEnddate(data.enddate);
       setProgress(data.progress);
     } else {
-      setTeacher("Jhon Ramirez");
+      setTeacher("");
       setStudents(0);
       setLevel("");
       setUnit("");
@@ -36,7 +37,7 @@ export default function Managedata({
       setEnddate("");
       setProgress("");
     }
-  }, [update, data]);
+  }, [data]);
 
   const onSubmitCallBack = function (e) {
     e.preventDefault();

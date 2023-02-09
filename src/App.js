@@ -3,21 +3,22 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Users from "./Components/Users/Users";
-import Showdata from "./Components/ShowData/CourseDataTable";
-import Managefiles from "./Components/ManageFiles/Managefiles";
-import Menu from "./Components/Dashboard/Dashboard";
+import CourseDataTable from "./Components/Courses/CourseDataTable";
+import Managefiles from "./Components/Managefiles";
+import Dashboard from "./Components/Dashboard";
+// import Login from "./Components/Login";
 
 function App() {
   return (
+    // CREAR RUTEO DESDE EL LOGIN & register
     <div className="App">
-      <Sidebar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Menu />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/data" element={<Showdata />} />
-
-          <Route path="/manage-files" element={<Managefiles />} />
+          {/* <Route path="/" component={<Login />} /> */}
+          <Route path="/" component={<Dashboard />} />
+          <Route path="/users" component={<Users />} />
+          <Route path="/data" component={<CourseDataTable />} />
+          <Route path="/manage-files" component={<Managefiles />} />
         </Routes>
       </BrowserRouter>
     </div>
