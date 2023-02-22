@@ -1,8 +1,8 @@
 import React from "react";
 import "../App.css";
-import { SidebarData } from "./SidebarData";
+import { SidebarData } from "./TeacherSidebar";
 
-function Sidebar() {
+function TeacherSidebar() {
   return (
     <div className="Sidebar">
       <ul className="SidebarList">
@@ -25,4 +25,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default TeacherSidebar;

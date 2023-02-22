@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import TeacherSidebar from "./Sidebar";
 
 const assistanceData = [
   {
@@ -33,10 +34,11 @@ const assistanceData = [
   },
 ];
 
-export default function Assistance() {
+export default function TeacherAssistance() {
   const tableData = useState(assistanceData);
   return (
     <div className="assistance">
+      <TeacherSidebar />
       <div className="assistance-table-tittle">
         <h1>Courses</h1>
 

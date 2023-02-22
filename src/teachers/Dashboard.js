@@ -1,8 +1,9 @@
 import React from "react";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import { CheckBox } from "@mui/icons-material";
+import TeacherSidebar from "./Sidebar";
 
-export default function Dashboard() {
+export default function TeacherDashboard() {
   const courseData = [
     {
       id: 1,
@@ -12,6 +13,7 @@ export default function Dashboard() {
 
   return (
     <div className="Dashboard">
+      <TeacherSidebar />
       <h1>Hello back Teacher #NAME</h1>
       <div className="Dashboard-classp">
         <h3>My courses</h3>
@@ -33,7 +35,6 @@ export default function Dashboard() {
           </a>
         </div>
       </div>
-      https://meet.google.com
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import SidebarStudent from "./SidebarStudent";
 
 const assistanceData = [
   { date: "01-12-03", id: 1, level: 1, students: 1, status: "in process..." },
@@ -8,17 +9,18 @@ const assistanceData = [
   { date: "01-12-03", id: 1, level: 1, students: 1, status: "in process..." },
 ];
 
-export default function Assistance() {
+export default function StudentAssistance() {
   const tableData = useState(assistanceData);
   return (
     <div className="assistance">
-      <div className="assistance-table-tittle">
+      <SidebarStudent />
+      <div className="assistance-student-table-tittle">
         <h1>Assistance</h1>
         <h4>Courses: 1</h4>
         <h4>Teacher: $NAME</h4>
         <h4>Level: 1</h4>
 
-        <div className="AssistanceTable">
+        <div className="AssistanceStudentTable">
           <table>
             <thead>
               <tr>

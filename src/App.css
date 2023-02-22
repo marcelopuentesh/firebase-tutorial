@@ -1,6 +1,7 @@
 .App {
   width: 100vw;
   height: 100vh;
+  display: flex;
 }
 html {
   margin-top: -18px;
@@ -16,6 +17,11 @@ body {
 
 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+form.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .Sidebar {

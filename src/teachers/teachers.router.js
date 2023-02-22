@@ -1,19 +1,23 @@
-import "./App.css";
-import Sidebar from "./Sidebar";
-import Profile from "./Profile";
-import Assistance from "./Assistance";
-import Settings from "./Settings";
-import Dashboard from "./Dashboard";
+import "./teacher.css";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TeacherAssistance from "./Assistance";
+import Settings from "./Settings";
+import TeacherDashboard from "./Dashboard";
+import TeacherProfile from "./Profile";
+
+import { Route, Routes } from "react-router-dom";
 
 export function TeacherRouter() {
   return (
     <Routes>
-      <Route path="teacher" element={<Dashboard />}>
-        <Route exact path="profile" element={<Profile />} />
-        <Route exact path="assistance" element={<Assistance />} />
-        <Route exact path="settings" element={<Settings />} />
+      <Route path="teacher/" element={<TeacherDashboard />}>
+        <Route exact path="teacher/profile" element={<TeacherProfile />} />
+        <Route
+          exact
+          path="teacher/assistance"
+          element={<TeacherAssistance />}
+        />
+        <Route exact path="teacher/settings" element={<Settings />} />
       </Route>
     </Routes>
   );

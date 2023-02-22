@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import TeacherSidebar from "./Sidebar";
 
 export default function Settings() {
   return (
-    <div className='settings'>Settings</div>
-  )
+    <div className="settings">
+      <TeacherSidebar />
+    </div>
+  );
 }

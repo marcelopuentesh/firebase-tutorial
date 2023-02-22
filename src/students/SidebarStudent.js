@@ -1,11 +1,13 @@
 import React from "react";
-import { SidebarData } from "./SidebarData";
+
 import "../App.css";
-function Sidebar() {
+import { StudentSidebar } from "./StudentSidebar";
+
+function SidebarStudent() {
   return (
     <div className="Sidebar">
       <ul className="SidebarList-student">
-        {SidebarData.map((val, key) => {
+        {StudentSidebar.map((val, key) => {
           return (
             <li
               key={key}
@@ -24,4 +26,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default SidebarStudent;

@@ -1,18 +1,18 @@
-import "./App.css";
+import "./student.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Profile from "./Profile";
-import Assistance from "./Assistance";
-import Dashboard from "./Dashboard";
-import Settings from "./Settings";
+import { Routes, Route } from "react-router-dom";
+import StudentProfile from "./Profile";
+import StudentAssistance from "./Assistance";
+import StudentDashboard from "./Dashboard";
+import StudentSettings from "./Settings";
 
 export function StudentRouter() {
   return (
-        <Routes>
-          <Route exact path="student/" element={<Dashboard />} />
-          <Route exact path="student/profile" element={<Profile />} />
-          <Route exact path="student/assistance" element={<Assistance />} />
-          <Route exact path="student/settings" element={<Settings />} />
-        </Routes>
+    <Routes>
+      <Route exact path="student/" element={<StudentDashboard />} />
+      <Route exact path="student/profile" element={<StudentProfile />} />
+      <Route exact path="student/assistance" element={<StudentAssistance />} />
+      <Route exact path="student/settings" element={<StudentSettings />} />
+    </Routes>
   );
 }
