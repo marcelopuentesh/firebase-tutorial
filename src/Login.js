@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import firebaseApp from "./firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
+import { useNavigate, Link } from "react-router-dom";
 import "./assets/iconothalan.png";
 import "./Login.css";
 import { Button } from "@mui/material";
@@ -10,6 +10,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -30,6 +31,7 @@ const Login = () => {
     <div className="login-container">
       <div className="logo-login"></div>
       <form className="login-form" onSubmit={handleLogin}>
+        <a></a>
         <input
           type="email"
           placeholder="Email"
@@ -42,6 +44,22 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        <Link
+          to="/resetpassword"
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          Forgot Password?
+        </Link>
+        <Button
+          type="submit"
+          onClick={() => {
+            navigate("/register");
+          }}
+        >
+          {" "}
+          Sign In{" "}
+        </Button>
+
         <Button type="submit"> Login </Button>
         {error && <p>{error}</p>}
       </form>

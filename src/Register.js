@@ -20,6 +20,7 @@ const Register = () => {
   const [documentType, setDocumentType] = useState("");
   const [id, setId] = useState("");
   const [gender, setGender] = useState("");
+  const [profilePicture, setProfilePicture] = useState(null);
 
   const navigate = useNavigate();
 
@@ -181,6 +182,9 @@ const Register = () => {
             <option value="teacher">Female</option>
             <option value="student">Other</option>
           </select>
+        </label>
+        <label>
+          <input type="file"></input>
         </label>
 
         <Button type="submit"> Sign Up </Button>
