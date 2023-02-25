@@ -5,6 +5,8 @@ import { useNavigate, Link } from "react-router-dom";
 import "./assets/iconothalan.png";
 import "./Login.css";
 import { Button } from "@mui/material";
+import { db } from "./store";
+import { collection,  getDocs, query, where } from "firebase/firestore";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,19 +14,23 @@ const Login = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     const auth = getAuth(firebaseApp);
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
+    try {
+      const user = await signInWithEmailAndPassword(auth, email, password);
+      if (user) {
+        const userType = collection(db, "user");
+        const q=  query(userType,where('email','==',email));
+        const result = await getDocs(q);
+        result.forEach((item)=>{
+          console.log(item.data());
+        })
+      }
+ 
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   return (
@@ -52,9 +58,6 @@ const Login = () => {
         </Link>
         <Button
           type="submit"
-          onClick={() => {
-            navigate("/register");
-          }}
         >
           {" "}
           Sign In{" "}
